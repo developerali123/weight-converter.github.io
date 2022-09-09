@@ -5,102 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>weight converter</title>
-    <style>
-        body{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-image: linear-gradient(to bottom left, rgb(255, 99, 117), rgb(228, 100, 135), rgb(201, 102, 153), rgb(173, 103, 171), rgb(146, 105, 189), rgb(119, 106, 207), rgba(103, 118, 177, 0.9), rgba(86, 130, 147, 0.8), rgba(70, 143, 118, 0.7), rgba(53, 155, 88, 0.59), rgba(37, 167, 58, 0.49), rgba(20, 179, 28, 0.39));
-        }
-        .container{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding:20px;
-            border: 2px solid black;
-            background: pink;
-            width: 50%;
-            border-radius: 10px;
-            box-shadow: 2px 2px 5px 5px blue;
-        }
-        h1{
-            font-size: 50px;
-            text-align: center;
-        }
-        #box{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px auto;
-        }
-        label{
-            font-size: 30px;
-            margin-right: 10px;
-        }
-        input{
-            padding:10px;
-            font-size: 20px;
-        }
-        input:focus{
-            background-color: rgb(192, 255, 226);
-        }
-        button {background-image: linear-gradient(to right, #16A085 0%, #F4D03F  51%, #16A085  100%)}
-         button {
-            margin: 10px auto;
-            padding: 15px 45px;
-            text-align: center;
-            text-transform: uppercase;
-            transition: 0.5s;
-            background-size: 200% auto;
-            color: white;
-            outline: none;            
-            box-shadow: 0 0 20px #eee;
-            border-radius: 10px;
-            display: block;
-            cursor:pointer;
-            font-size: 20px;
-            color: rgb(34, 11, 245);
-          }
-
-          button:hover {
-            background-position: right center; /* change the direction of the change here */
-            color: #fff;
-            text-decoration: none;
-          }
-         #output{
-             font-size:25px;
-             font-weight: bold;
-             color: black;
-             margin: 10px auto;
-             text-decoration: underline solid red;
-             text-align: center;
-         }
-         @media screen and (max-width:768px) {
-            .container{
-                width: 80%;
-            }             
-         }
-         @media screen and (max-width:425px) {
-             .container{
-                 width: 80%;
-                 margin: 10px;
-             }
-             h1{
-                 font-size: 35px;
-                 text-align: left;
-             }
-             #box{
-                 display: flex;
-                 flex-direction: column;
-             }
-             input{
-                 margin-top: 10px;
-             }
-         }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -112,14 +17,6 @@
         <div id="output"></div>
         <button id="btn">click</button>
     </div>
-    <script>
-        var btn=document.getElementById("btn");
-        btn.addEventListener("click",function(){
-            var kg=parseFloat(document.getElementById("kg").value);
-            var pound=kg*2.2046;
-            var n=pound.toFixed(2);
-            document.getElementById("output").innerHTML="your weight in pound is  "+n;
-        })
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
